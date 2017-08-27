@@ -1,0 +1,139 @@
+/* LAS VARIABLES SCOPE */
+:root{
+  --colorAmarillo:#FFFF00;
+  --colorMarron:#330000;
+  --colorNegro:#000000;
+}
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color:#ffffff;
+}
+.adorno{
+  background-image: url(../img/adornoHeader.jpg);
+  height: 5px;
+}
+.redes{
+  background-color:var(--colorNegro);
+  display: flex;
+  justify-content: flex-end;
+}
+.redes a {
+  font-family: RedesSociales;
+  color: rgb(222, 215, 130);
+  font-size: 3em;
+  height: 1em;
+  line-height: 1em;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.redes a:hover{
+  color: var(--colorAmarillo);
+}
+nav{
+
+    background-color:var(--colorNegro);
+      border-top: 1px solid var(--colorAmarillo);
+}
+nav .menu{
+  width: 80%;
+    margin: 0px  auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav .menu li{
+  flex:auto;
+  text-align: center;
+  list-style: none;
+
+
+  /*border-right: 1px solid #fee692;*/
+}
+
+nav .menu .medio{
+ background-color: var(--colorNegro);
+}
+
+nav .menu li:last-child{
+  border-right: none;
+}
+nav .menu li .item{
+  font-size: 1.2em;
+  font-family: sans-serif;
+  color: var(--colorAmarillo);
+  height: 38px;
+  line-height: 38px;
+  display: block;
+  text-decoration: none;
+  background-color:var(--colorNegro);
+  position: relative;
+}
+nav .menu li .logo{
+  position: relative;
+  z-index: 100;
+}
+nav .menu .logo img{
+  float: center;
+  position: absolute;
+  width: 80px;
+  left: -40px;
+  top: -20px;
+}
+nav .menu li .item:hover{  /*ANIMACION SLIDE*/
+  box-shadow: 0px 100px rgb(14, 4, 1) inset;
+  transition: all 1ss;
+}
+nav .menu li .item:before{
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--colorAmarillo);
+  position: absolute;
+  left: 50%;
+  bottom: 0px; /*para que se vaya abajo*/
+  transition: all 1s;
+}
+nav .menu li .item:hover:before{
+  width: 100%;
+  left:0;
+}
+
+/*------SLIDER-------*/
+.slider{
+  display: flex;
+  margin: 1px auto;
+  justify-content: center;
+  background-color: var(--colorNegro);
+}
+.slider .fondo{
+  position: relative;
+}
+.slider .fondo img{
+  display: block;
+}
+
+.slider .fondo .letras{
+  color: #ffffff;
+  font-size: 3em;
+  font-family: sans-serif;
+  float: center;
+  margin-top:-280px;
+  margin-left: 50px;
+  position: absolute;
+
+}
+.slider .fondo .letras h1{
+  font-size: 1.3em;
+  text-shadow:5px 5px 2px black;
+}
+.slider .fondo .letras p{
+  font-size: 0.8em;
+  text-shadow:5px 5px 2px black;
+}
